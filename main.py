@@ -2,6 +2,8 @@
 from art import logo, vs
 from game_data import data
 from random import randint, choice
+import os
+
 
 # TODO: STARTING CONDITIONS
 
@@ -9,6 +11,13 @@ vocals = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"]
 
 
 # TODO: FUNCTIONS
+
+def clear():
+    """
+    Function clearing the screen
+    """
+    return os.system('clear')
+
 def pick_random():
     """
     Function choosing from data a random dictionary to compare.
@@ -65,4 +74,5 @@ def play_game():
 # TODO: TRYING
 
 while input("Do you want to play? 'y' or 'n'? ") == 'y':
+    clear()
     play_game()
